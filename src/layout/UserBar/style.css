@@ -1,0 +1,7 @@
+.username {
+    font-size: 40px;
+    /* font: bold italic; */
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(193, 198, 202);
+}

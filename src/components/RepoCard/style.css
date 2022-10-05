@@ -1,0 +1,19 @@
+.card {
+    border: 0.5px solid #30363d;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+
+}
+
+.priv {
+    
+    border: 0.5px solid #30363d;
+    color: lightslategray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 6px;
+    /* align-content: flex-start */
+}

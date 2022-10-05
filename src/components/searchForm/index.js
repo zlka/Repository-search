@@ -1,28 +1,35 @@
 import React, {useState} from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import fetchData from '../../actions'
+
+import './style.css'
 
 function SearchForm() {
 
-    const [ username, setUsername] = useState('')   
+    const [ username, setUsername] = useState('')
+    const loaded = useSelector(state => state.loaded)   
     const dispatch = useDispatch()
 
     function handleSubmit (e) {
         e.preventDefault()
         dispatch(fetchData(username))
-        // setUsername('')
+        setUsername('')
     }
 
     function updateInput (e) {
         const input = e.target.value
         setUsername(input)
     }
+    const activeClass = (loaded ? undefined : 'init')
 
     return (
+        <div className={activeClass}>
+        <h1>GitHub Tracker</h1>
         <form onSubmit={handleSubmit}>
-            <input type="text" value={username} onChange={updateInput} />
-            <input type="submit" value={"Search"} />
+            <input id='searchBar' type="text" value={username} onChange={updateInput} placeholder='   Enter username...' required/>
+            <input id='searchButton' type="submit" value={"Search"} />
         </form>
+        </div>
 
     )
 }

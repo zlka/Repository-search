@@ -1,0 +1,49 @@
+.init {
+    margin-top: 13%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.init > h1 {
+    font-size: 80px;
+}
+
+.init > form {
+    scale: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#searchBar {
+    color: white;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+#searchButton {
+    width: 60px;
+    background-color: transparent;
+    color: grey;
+    border: 1px solid grey;
+    border-radius: 6px;
+}
+
+/* #searchButton :hover {
+    background-color: grey;
+    color: #58a6ff;
+} */
+
+
+.init > form > #searchBar {
+    height: 20px;
+    width: 300px;
+
+}
+
+ :focus {
+    outline:none
+ }
