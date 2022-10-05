@@ -10,6 +10,7 @@ function SearchForm() {
     function handleSubmit (e) {
         e.preventDefault()
         dispatch(fetchData(username))
+        // setUsername('')
     }
 
     function updateInput (e) {
