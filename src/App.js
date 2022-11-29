@@ -14,7 +14,7 @@ function App() {
       <SearchForm />
       { error ? <p role='alert'>Oops there's been an error!</p> : renderResult() }
     
-    { loaded ? <RepoList/>: 'Search a username and find the repositories.'}
+    { loaded ? <RepoList/> : null }
     </div>
   );
 }

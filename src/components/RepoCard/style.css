@@ -6,6 +6,11 @@
 
 }
 
+.card:hover{
+    background-color: #21262d;
+    ;
+}
+
 .priv {
     
     border: 0.5px solid #30363d;

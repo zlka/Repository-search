@@ -5,15 +5,17 @@ import fetchData from '../../actions'
 import './style.css'
 
 function SearchForm() {
-
+    const [ hidden, setHidden ] = useState('')
     const [username, setUsername] = useState('')
     const loaded = useSelector(state => state.loaded)
+
     const dispatch = useDispatch()
 
     function handleSubmit(e) {
         e.preventDefault()
         dispatch(fetchData(username))
         setUsername('')
+        setHidden(true)
     }
 
     function updateInput(e) {
@@ -24,7 +26,11 @@ function SearchForm() {
 
     return (
         <div className={activeClass}>
-            <h1>GitHub Tracker</h1>
+            <header>
+                <h1>GitHub Tracker</h1>
+                <p hidden={hidden}>Search a username to find the repositories.</p>
+            </header>
+
             <form onSubmit={handleSubmit}>
                 <input id='searchBar'
                     type="text"
@@ -32,7 +38,10 @@ function SearchForm() {
                     onChange={updateInput}
                     placeholder='   Enter username...' required />
 
-                <button id='searchButton' type="submit"> search</button>
+                <button 
+                id='searchButton' 
+                type="submit"
+                > search</button>
             </form>
         </div>
 

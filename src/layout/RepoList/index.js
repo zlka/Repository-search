@@ -1,15 +1,15 @@
 import { useSelector } from "react-redux";
 import { RepoCard } from "../../components";
 import { UserCard } from '../'
+import './style.css'
 
 function RepoList() {   
     const repos = useSelector(state => state.repos)
     const loading = useSelector(state => state.loading)
-    console.log(repos)
 
 
-    const renderRepos = repos.map(repo => 
-            <RepoCard repository={repo} />
+    const renderRepos = repos.map((repo,idx) => 
+            <RepoCard repository={repo} key={idx} />
         );
     
 
@@ -20,7 +20,7 @@ function RepoList() {
             :
             <> 
             <UserCard />
-            <section> { renderRepos } </section>
+            <section id ='repoCards'> { renderRepos } </section>
             </>
         }
         </>
