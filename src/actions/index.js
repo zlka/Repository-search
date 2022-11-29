@@ -31,13 +31,13 @@ const fetch2 = async username => {
         throw new Error(err.message)
     }
 }
+// add another fetch for commit data
+// const fetchCommits = async (username,name) => {
 
-const fetchCommits = async (username,name) => {
-
-    try {
-        const { data } = await axios.get(`https://api.github.com/users/${username}/${name}`)
-        return data;
-    } catch (err) {
-        throw new Error(err.message)
-    }
-}
+//     try {
+//         const { data } = await axios.get(`https://api.github.com/users/${username}/${name}`)
+//         return data;
+//     } catch (err) {
+//         throw new Error(err.message)
+//     }
+// }
