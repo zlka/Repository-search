@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { RepoCard } from "../../components";
+import { UserCard } from '../'
 
 function RepoList() {   
     const repos = useSelector(state => state.repos)
@@ -16,7 +17,11 @@ function RepoList() {
         <>
         {
             loading ? <h2>Loading . . .</h2>
-            : <section> { renderRepos } </section>
+            :
+            <> 
+            <UserCard />
+            <section> { renderRepos } </section>
+            </>
         }
         </>
     );

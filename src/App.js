@@ -1,6 +1,6 @@
 import { SearchForm } from './components';
 import { useSelector } from 'react-redux';
-import { UserBar, RepoList } from './layout';
+import { UserBar, RepoList} from './layout';
 import './App.css';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <SearchForm />
       { error ? <p role='alert'>Oops there's been an error!</p> : renderResult() }
     
-    { loaded ? <RepoList /> : 'It is rather simple. Search a username and find the repositories.'}
+    { loaded ? <RepoList/>: 'Search a username and find the repositories.'}
     </div>
   );
 }

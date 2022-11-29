@@ -25,6 +25,7 @@ function fetchData(username) {
 };
 export default fetchData
 
+
 const fetch2 = async username => {
 
     try {
